@@ -1,0 +1,4 @@
+delete.svg is Delete 20 Regular from Microsoft Fluent System Icons.
+Source: https://github.com/microsoft/fluentui-system-icons/blob/main/assets/Delete/SVG/ic_fluent_delete_20_regular.svg
+Copyright (c) 2020 Microsoft Corporation. MIT license: Fluent-Icons-LICENSE.txt.
+Modification: fill changed from #212121 to #99aab5 for the application's dark palette.

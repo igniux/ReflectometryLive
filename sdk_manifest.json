@@ -1,0 +1,9 @@
+{
+  "file": "avaspecx64.dll",
+  "architecture": "x64",
+  "file_version": "9.14.0.0",
+  "bytes": 392192,
+  "sha256": "E3601A5097AFF5B81E3277F4A0EA70C04D1E0A67B869F759B4D541EEA62A068F",
+  "runtime_location": "Application folder, beside run.py",
+  "copy_verified": true
+}

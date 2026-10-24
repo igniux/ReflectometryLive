@@ -1,0 +1,21 @@
+{
+  "license": "CC0 1.0; coefficient records from the refractiveindex.info database",
+  "AlN": {
+    "formula": 1,
+    "wavelength_range_um": [0.22, 5.0],
+    "coefficients": [2.1399, 1.3786, 0.1715, 3.861, 15.03],
+    "direction": "ordinary",
+    "reference": "J. Pastrnak and L. Roskovcova, Refraction index measurements on AlN single crystals, Phys. Stat. Sol. 14, K5-K8 (1966)",
+    "publication": "https://doi.org/10.1002/pssb.19660140127",
+    "dataset": "https://raw.githubusercontent.com/polyanskiy/refractiveindex.info-database/master/database/data/main/AlN/nk/Pastrnak-o.yml"
+  },
+  "sapphire": {
+    "formula": 1,
+    "wavelength_range_um": [0.20, 5.0],
+    "coefficients": [0, 1.4313493, 0.0726631, 0.65054713, 0.1193242, 5.3414021, 18.028251],
+    "direction": "ordinary",
+    "temperature_K": 293,
+    "reference": "Malitson and Dodge, JOSA 62, 1405 (1972), conference abstract; dispersion formula: M. J. Dodge, Handbook of Laser Science and Technology IV (1986), p. 30",
+    "dataset": "https://raw.githubusercontent.com/polyanskiy/refractiveindex.info-database/master/database/data/main/Al2O3/nk/Malitson-o.yml"
+  }
+}

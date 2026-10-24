@@ -1,0 +1,76 @@
+{
+  "schema_version": 2,
+  "application_version": "1.1.0",
+  "measurement_name": "measurement",
+  "saved_at_utc": "2026-10-08T09:38:52.998+00:00",
+  "units": {
+    "Wave": "nm",
+    "Sample": "counts",
+    "Dark": "counts",
+    "Reference": "counts",
+    "Reflectance": "relative percent"
+  },
+  "frame": {
+    "device_serial": "1212121U1",
+    "source_kind": "Avantes USB",
+    "timestamp_utc": "2026-10-08T09:38:52.847+00:00",
+    "sequence": 2026,
+    "sdk_timestamp": 54906754,
+    "settings": {
+      "integration_ms": 6.0,
+      "averages": 11,
+      "smoothing_pixels": 0,
+      "high_res_adc": true
+    }
+  },
+  "calibration": {
+    "device_serial": "1212121U1",
+    "settings": {
+      "integration_ms": 6.0,
+      "averages": 11,
+      "smoothing_pixels": 0,
+      "high_res_adc": true
+    },
+    "dark_timestamp_utc": "2026-10-08T09:31:20.732+00:00",
+    "reference_timestamp_utc": "2026-10-08T09:32:00.714+00:00",
+    "captures": 5
+  },
+  "fit_settings": {
+    "wavelength_min_nm": 400.0,
+    "wavelength_max_nm": 850.0,
+    "thickness_min_nm": 100.0,
+    "thickness_max_nm": 1200.0,
+    "max_rmse_pp": 2.0,
+    "model": "sio2_si",
+    "oxide_estimate_nm": 500.0,
+    "aln_estimate_nm": 500.0,
+    "aln_min_nm": 100.0,
+    "aln_max_nm": 1200.0
+  },
+  "result": {
+    "thickness_nm": 506.6923558428559,
+    "scale": 0.49776491505580284,
+    "sio2_thickness_nm": 506.6923558428559,
+    "aln_thickness_nm": null,
+    "refined_layer_pairs": [],
+    "offset_percentage_points": 1.8385571855535006,
+    "rmse_percentage_points": 2.7427444754477577,
+    "status": "Poor fit",
+    "message": "RMSE exceeds 2 percentage points.",
+    "points": 791,
+    "fit_time_ms": 2.3713999980827793,
+    "oxide_n633": 1.4570121246412515,
+    "model": "Air / SiO2 / Si; normal incidence; Malitson 1965 + Green 2008",
+    "signal": "100*(sample-dark)/(reference-dark), aluminium mirror reference",
+    "uncertainty": "Thickness is conditional on the published material dispersion and chosen stack; RMSE is signal error, not thickness uncertainty."
+  },
+  "optical_sources": {
+    "SiO2": "https://doi.org/10.1364/JOSA.55.001205",
+    "Si": "https://doi.org/10.1016/j.solmat.2008.06.009"
+  },
+  "search_description": "Full 1D grid with continuous best-minimum refinement.",
+  "sdk": {
+    "file": "avaspecx64.dll",
+    "sha256": "e3601a5097aff5b81e3277f4a0ea70c04d1e0a67b869f759b4d541eea62a068f"
+  }
+}

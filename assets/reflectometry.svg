@@ -1,0 +1,7 @@
+<!-- Original project artwork. Copyright (c) 2026 Ignas Dailidėnas. MIT license. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <rect x="8" y="8" width="112" height="112" rx="25" fill="#282b30"/>
+  <path d="M42 88V30H65C79 30 87 37 87 49C87 61 79 68 65 68H42M65 68L87 89"
+        fill="none" stroke="#dcdcdc" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M30 102H98M38 110H90" fill="none" stroke="#24ad11" stroke-width="4" stroke-linecap="round"/>
+</svg>

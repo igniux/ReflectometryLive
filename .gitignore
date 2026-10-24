@@ -1,0 +1,40 @@
+.venv/
+.reflectometry-venv/
+.cache/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+*.egg-info/
+.coverage
+htmlcov/
+
+# Private instrument captures and local analysis outputs.
+/Measurements/
+/measurements/
+/validation/reports/
+/validation/oct08_refit/
+/validation/batch_regression/
+/validation/historical_comparison_*/
+/validation/literature/
+/validation/validation_summary.md
+
+# Only the approved spectrum/calibration fixtures are shared, not their plots.
+/tests/202*/*
+!/tests/202*/metadata.json
+!/tests/202*/spectrum.csv
+
+# Vendor SDK and machine-specific launchers are installed locally.
+/avaspecx64.dll
+*.lnk
+*.dll
+*.pyd
+*.exe
+*.log
+dist/
+build/
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+Desktop.ini

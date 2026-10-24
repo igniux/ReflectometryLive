@@ -1,0 +1,14 @@
+{
+  "material": "AZ ECI 3027",
+  "ui_selection": "AZ3027E",
+  "state": "unexposed / unbleached; solvent-free supplier reference used for soft-baked resist",
+  "model": "n = N1 + N2 / wavelength_um^2 + N3 / wavelength_um^4",
+  "cauchy_coefficients": [1.6018, 0.009896, 0.000886],
+  "coefficient_units": ["dimensionless", "um^2", "um^4"],
+  "application_range_um": [0.5, 0.85],
+  "extinction": "k=0 assumed in the selected transparent visible interval; measured blue/UV absorption is excluded, not extrapolated",
+  "source": "https://www.microchemicals.com/dokumente/application_notes/photoresists_optical_parameters.pdf",
+  "table": "page 2, AZ ECI 3027 column, Cauchy Constants, unbleached",
+  "retrieved_date": "2026-10-09",
+  "limitations": "Provisional reference for the user's AZ 3027E designation. Verify bottle/product designation. Residual solvent and soft-bake recipe may shift optical constants. No accuracy validation with the user's resist spectra yet."
+}

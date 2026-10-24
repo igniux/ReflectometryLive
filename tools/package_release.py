@@ -30,6 +30,9 @@ def package(release_dir, output_dir, version, source_commit):
             raise ValueError(f"Incomplete release: missing {name}")
     if any(p.name.casefold() == "avaspecx64.dll" for p in release_dir.rglob("*")):
         raise ValueError("A public release must not contain the vendor SDK DLL.")
+    unwanted = {"qt6virtualkeyboard.dll", "qtvirtualkeyboardplugin.dll", "qt6pdf.dll", "qpdf.dll"}
+    if any(p.name.casefold() in unwanted for p in release_dir.rglob("*")):
+        raise ValueError("Unused PDF/virtual-keyboard components must be omitted from the public build.")
     files = []
     for path in sorted(release_dir.rglob("*")):
         relative = path.relative_to(release_dir)

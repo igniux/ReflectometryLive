@@ -27,6 +27,19 @@ analysis = Analysis(
     excludes=["tkinter", "PyQt5", "PyQt6", "PySide2", "pytest", "_pytest"],
     noarchive=False,
 )
+# The Qt GUI hook collects optional PDF/virtual-keyboard plugins and their QML
+# dependencies. This Widgets application uses neither; do not ship those
+# unrelated modules (notably the separately licensed virtual keyboard).
+unused_qt = {"Qt6Pdf.dll", "Qt6Qml.dll", "Qt6QmlMeta.dll", "Qt6QmlModels.dll",
+             "Qt6QmlWorkerScript.dll", "Qt6Quick.dll", "Qt6VirtualKeyboard.dll",
+             "QtPdf.pyd", "QtQml.pyd", "QtQuick.pyd", "QtVirtualKeyboard.pyd",
+             "qpdf.dll", "qtvirtualkeyboardplugin.dll"}
+analysis.binaries = [entry for entry in analysis.binaries
+                     if Path(entry[0]).name not in unused_qt
+                     and "/qml/" not in entry[0].replace("\\", "/").lower()]
+analysis.datas = [entry for entry in analysis.datas
+                  if "/qml/" not in entry[0].replace("\\", "/").lower()
+                  and "qtvirtualkeyboard" not in entry[0].lower()]
 archive = PYZ(analysis.pure)
 exe = EXE(
     archive, analysis.scripts, [],

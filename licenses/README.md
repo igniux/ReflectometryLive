@@ -25,6 +25,8 @@ Upstream projects:
 
 - https://github.com/qt/qtbase/tree/v6.11.2
 - https://github.com/qt/qtsvg/tree/v6.11.2
+- https://github.com/qt/qtimageformats/tree/v6.11.2
+- https://github.com/qt/qttranslations/tree/v6.11.2
 - https://github.com/pyside/pyside-setup/tree/v6.11.2
 - https://doc.qt.io/qt-6/build-sources.html
 - https://doc.qt.io/qtforpython-6/building_from_source/index.html

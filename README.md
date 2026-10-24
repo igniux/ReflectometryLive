@@ -1,5 +1,7 @@
 # Reflectometry Live
 
+[![Windows tests](https://github.com/Igniux/ReflectometryLive/actions/workflows/windows-tests.yml/badge.svg)](https://github.com/Igniux/ReflectometryLive/actions/workflows/windows-tests.yml)
+
 A Windows desktop application for live thin-film thickness fitting with Avantes
 USB spectrometers. It displays spectra immediately after connection and fits
 ordered films on silicon or sapphire using wavelength-dependent optical data.
@@ -172,6 +174,11 @@ synthetic stacks, calibration failures, simulated SDK errors, replay, UI state,
 saving/reopening and clean shutdown. The real-DLL loading test skips when the
 optional SDK is absent. Simulation and replay do not verify physical USB timing
 or experimental thickness accuracy.
+
+GitHub Actions runs these tests on Windows x64 with Python 3.14 on every push
+and pull request, without a vendor SDK or instrument. Test reports are retained
+as workflow artifacts. An SDK-free checkout is expected to skip the one optional
+real-DLL loading test; fake-SDK and numerical tests still run.
 
 To build the windowed executable:
 

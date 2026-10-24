@@ -197,6 +197,12 @@ driver for USB operation. The build includes Python, Qt, numerical libraries,
 optical data, icons and dependency metadata in `_internal`. Keep all supporting
 files with the EXE, and distribute the full clean folder as a ZIP.
 
+`tools/package_release.py` creates the SDK-free public ZIP, an embedded file/hash
+manifest tied to a tested source commit, and `SHA256SUMS.txt`. It excludes local
+caches/measurements and rejects a release containing the vendor DLL. The release
+also supplies the corresponding unmodified Qt/PySide6 library sources separately;
+ordinary users only need the Windows ZIP.
+
 `validation/check_exe.ps1` exercises the packaged application in replay from an
 unrelated working directory. It checks SDK loading only when the optional DLL
 is installed. `validation/check_startup.ps1` measures startup with simulated raw

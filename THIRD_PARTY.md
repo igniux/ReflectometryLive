@@ -32,6 +32,11 @@ are not checked into Git. Windows builds collect dependency metadata/license
 files into `_internal`; keep these with a redistributed application. The
 project's MIT license does not replace dependency licenses.
 
+The Windows package also contains explicit Qt LGPL/GPL, Python and PyInstaller
+license texts in `licenses`. The release provides the unmodified corresponding
+Qt/PySide6 sources alongside the binary download. See `licenses/README.md` for
+library replacement and source information.
+
 ## Avantes SDK and drivers
 
 `avaspecx64.dll` and the USB drivers are vendor components, not included in this

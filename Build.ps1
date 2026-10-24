@@ -42,6 +42,9 @@ Copy-Item -LiteralPath (Join-Path $appDir 'sdk_manifest.json') -Destination $rel
 Copy-Item -LiteralPath (Join-Path $appDir 'Portable_README.txt') -Destination (Join-Path $releaseDir 'README.txt')
 Copy-Item -LiteralPath (Join-Path $appDir 'LICENSE') -Destination $releaseDir
 Copy-Item -LiteralPath (Join-Path $appDir 'THIRD_PARTY.md') -Destination $releaseDir
+Copy-Item -LiteralPath (Join-Path $appDir 'licenses') -Destination $releaseDir -Recurse
+& $PythonExe -c "from pathlib import Path; import sys,importlib.metadata as m,shutil; target=Path(sys.argv[1]); shutil.copyfile(Path(sys.base_prefix)/'LICENSE.txt',target/'Python.txt'); d=m.distribution('pyinstaller'); source=next(d.locate_file(p) for p in d.files if str(p).endswith('licenses/COPYING.txt')); shutil.copyfile(source,target/'PyInstaller.txt')" (Join-Path $releaseDir 'licenses')
+if ($LASTEXITCODE -ne 0) { throw 'Unable to collect runtime license notices.' }
 $shortcutShell = New-Object -ComObject WScript.Shell
 $shortcut = $shortcutShell.CreateShortcut((Join-Path $appDir 'Reflectometry Live.lnk'))
 $shortcut.TargetPath = Join-Path $releaseDir 'ReflectometryLive.exe'
